@@ -1,0 +1,246 @@
+.contacts-panel {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+.contacts-list-pane {
+  width: 350px;
+  flex: none;
+  border-right: 1px solid #eef0f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.contacts-header {
+  height: 83px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  border-bottom: 1px solid #eef0f4;
+}
+.contacts-header h2 {
+  margin: 4px 0 0;
+  font-size: 21px;
+}
+.contacts-header h2 small {
+  font-size: 13px;
+  color: #9aa4b4;
+  font-weight: 500;
+}
+.contacts-back {
+  display: none !important;
+}
+.contacts-search {
+  margin: 20px 20px 14px;
+  padding: 0 14px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #9aa4b4;
+  background: #f5f6fa;
+  border-radius: 10px;
+}
+.contacts-search input {
+  border: 0;
+  background: transparent;
+  min-width: 0;
+  flex: 1;
+  color: #202b38;
+}
+.contacts-request-link {
+  margin: 0 14px 18px;
+  border: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  text-align: left;
+  border-radius: 10px;
+  color: #263247;
+  font-weight: 600;
+}
+.contacts-request-link:hover,
+.contacts-row:hover {
+  background: #f5f6fa;
+}
+.contacts-request-icon {
+  width: 39px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: #7167ed;
+  border-radius: 11px;
+}
+.contacts-request-link b {
+  margin-left: auto;
+  background: #ef6272;
+  color: #fff;
+  border-radius: 12px;
+  min-width: 19px;
+  padding: 1px 5px;
+  text-align: center;
+  font-size: 11px;
+}
+.contacts-section-title {
+  padding: 10px 24px;
+  color: #9aa4b4;
+  font-size: 12px;
+  font-weight: 700;
+  background: #fafbfc;
+}
+.contacts-list {
+  overflow: auto;
+  flex: 1;
+}
+.contacts-row {
+  width: 100%;
+  border: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 12px 24px;
+  text-align: left;
+}
+.contacts-row.selected {
+  background: #f0efff;
+}
+.contacts-row span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.contacts-row strong {
+  color: #263247;
+  font-size: 14px;
+}
+.contacts-row small {
+  color: #9aa4b4;
+}
+.contacts-empty,
+.contacts-placeholder {
+  color: #9aa4b4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  padding: 55px 20px;
+}
+.contacts-profile-pane {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+}
+.contacts-placeholder h3 {
+  color: #263247;
+  margin: 0;
+}
+.contacts-placeholder p {
+  margin: 0;
+}
+.contacts-profile {
+  text-align: center;
+  width: min(340px, 90%);
+}
+.contacts-profile .avatar {
+  margin: auto;
+}
+.contacts-profile h3 {
+  margin: 18px 0 4px;
+  font-size: 22px;
+}
+.contacts-profile p {
+  color: #9aa4b4;
+  margin: 0 0 28px;
+}
+.contacts-profile-actions {
+  border-top: 1px solid #eef0f4;
+  padding-top: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.contacts-profile-actions .primary-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.contacts-delete-button {
+  border: 0;
+  background: transparent;
+  color: #9aa4b4;
+  padding: 8px;
+}
+.contacts-delete-button:hover {
+  color: #d44f5a;
+}
+.contacts-confirm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 25px;
+}
+.contacts-confirm-actions button {
+  border: 0;
+  border-radius: 9px;
+  padding: 10px 17px;
+}
+@media (max-width: 1000px) {
+  .contacts-list-pane {
+    width: 300px;
+  }
+}
+@media (max-width: 760px) {
+  .contacts-list-pane {
+    width: 260px;
+  }
+}
+@media (max-width: 600px) {
+  .app-shell:has(.contacts-panel) .sidebar {
+    display: none;
+  }
+  .app-shell:has(.contacts-panel) .main-panel {
+    display: flex;
+    width: 100%;
+  }
+  .contacts-list-pane {
+    width: 100%;
+  }
+  .contacts-profile-pane {
+    display: none;
+  }
+  .contacts-back {
+    display: grid !important;
+  }
+  .contacts-header {
+    padding: 0 16px;
+  }
+  .contacts-panel:has(.contacts-row.selected) .contacts-list-pane {
+    display: none;
+  }
+  .contacts-panel:has(.contacts-row.selected) .contacts-profile-pane {
+    display: grid;
+  }
+}
+.contacts-profile-back {
+  display: none;
+}
+@media (max-width: 600px) {
+  .contacts-profile-pane {
+    position: relative;
+  }
+  .contacts-profile-back {
+    display: grid;
+    position: absolute;
+    top: 20px;
+    left: 16px;
+  }
+}

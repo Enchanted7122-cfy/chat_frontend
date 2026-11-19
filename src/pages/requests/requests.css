@@ -1,0 +1,93 @@
+.modal-icon {
+  height: 46px;
+  width: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #f0efff;
+  color: #766bec;
+}
+.modal form {
+  display: grid;
+  gap: 17px;
+}
+.modal label {
+  display: grid;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #5d6879;
+}
+.modal input {
+  width: 100%;
+  border: 1px solid #e5e8ee;
+  background: #fff;
+  border-radius: 10px;
+  height: 43px;
+  padding: 0 13px;
+  font-size: 12px;
+  color: #273348;
+}
+.modal input:focus {
+  border-color: #8e85ef;
+  box-shadow: 0 0 0 3px #877df021;
+}
+.modal-submit {
+  margin-top: 5px;
+  width: 100%;
+}
+.request-list {
+  max-height: 350px;
+  overflow: auto;
+}
+.request-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 0;
+  border-top: 1px solid #f0f2f5;
+}
+.request-row .avatar {
+  width: 37px;
+  height: 37px;
+  min-width: 37px;
+  border-radius: 12px;
+}
+.request-row div {
+  flex: 1;
+  min-width: 0;
+}
+.request-row strong,
+.request-row small {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.request-row strong {
+  font-size: 11px;
+}
+.request-row small {
+  font-size: 10px;
+  color: #9ca7b5;
+  margin-top: 3px;
+}
+.request-row button {
+  background: #eeeaff;
+  color: #7066dc;
+  border: 0;
+  border-radius: 7px;
+  padding: 6px 8px;
+  font-size: 10px;
+  font-weight: 700;
+}
+.request-row button.subtle-button {
+  background: #f3f4f7;
+  color: #7f8a9b;
+}
+.request-empty {
+  text-align: center;
+  padding: 30px;
+  color: #a4adba;
+  font-size: 12px;
+}

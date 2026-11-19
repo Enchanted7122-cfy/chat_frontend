@@ -1,0 +1,187 @@
+:root {
+  font-family: "DM Sans", "Noto Sans SC", sans-serif;
+  color: #202b38;
+  background: #f7f8fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.56;
+}
+input,
+textarea {
+  outline: none;
+}
+.app-shell {
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  background: #fff;
+  overflow: hidden;
+}
+.brand-mark {
+  height: 39px;
+  width: 39px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  background: #7167ed;
+  color: #fff;
+  box-shadow: 0 7px 18px #7167ed35;
+}
+.avatar {
+  display: inline-grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  min-width: 43px;
+  border-radius: 15px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.avatar-large {
+  width: 66px;
+  height: 66px;
+  min-width: 66px;
+  border-radius: 21px;
+  font-size: 19px;
+}
+.avatar-peach {
+  background: #ffe0d0;
+  color: #a75443;
+}
+.avatar-lavender {
+  background: #e7ddff;
+  color: #7152b8;
+}
+.avatar-mint {
+  background: #d8f2e7;
+  color: #398b6d;
+}
+.avatar-sky {
+  background: #dceafa;
+  color: #4b7fb0;
+}
+.avatar-butter {
+  background: #f8ecd2;
+  color: #9d7940;
+}
+.avatar-group {
+  background: #ebe8ff;
+  color: #766be0;
+}
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: #928fa8;
+}
+.icon-button {
+  border: 0;
+  background: transparent;
+  color: #8b96a9;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+}
+.icon-button:hover {
+  background: #f1f3f9;
+  color: #535e79;
+}
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #746aeb;
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 19px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 7px 18px #746aeb30;
+}
+.primary-button:hover {
+  background: #6459dc;
+}
+.toast {
+  position: fixed;
+  z-index: 20;
+  right: 22px;
+  bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #29334c;
+  color: #fff;
+  border-radius: 11px;
+  padding: 12px 14px;
+  box-shadow: 0 15px 35px #26334d30;
+  font-size: 12px;
+  max-width: 370px;
+}
+.toast button {
+  border: 0;
+  background: none;
+  color: #d9dced;
+  padding: 0;
+}
+@media (max-width: 600px) {
+  .app-shell {
+    min-height: 100dvh;
+    height: 100dvh;
+  }
+}
+.modal-backdrop {
+  position: fixed;
+  z-index: 30;
+  inset: 0;
+  background: #202a4075;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+.modal {
+  width: min(440px, 100%);
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 30px 80px #121c3640;
+  padding: 34px;
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+}
+.modal h2 {
+  font-size: 21px;
+  margin: 19px 0 7px;
+}
+.modal > p {
+  font-size: 12px;
+  color: #9ca6b4;
+  line-height: 1.6;
+  margin: 0 0 25px;
+}
